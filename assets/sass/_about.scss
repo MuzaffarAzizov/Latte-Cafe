@@ -1,0 +1,33 @@
+$fontFirst: 'Inter', sans-serif;
+$fontSecond: 'Azeret Mono', monospace;
+@mixin h5 {
+  font-family: $fontSecond;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 22px;
+  color: #222222;
+}
+@mixin h3 {
+  font-family: $fontFirst;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 45px;
+  color: #222222;
+}
+.about {
+  text-align: center;
+  margin: 10% 5%;
+  h5 {
+    @include h5;
+  }
+  h3 {
+    @include h3;
+    @media (max-width: 940px) {
+      br {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+$fontFirst: 'Inter', sans-serif;
+$fontSecond: 'Azeret Mono', monospace;
+@mixin h2 {
+  font-family: $fontSecond;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 47px;
+  line-height: 62px;
+  letter-spacing: 1px;
+  color: #d27487;
+}
+@mixin p {
+  font-family: $fontFirst;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #d27487;
+}
+.award {
+  background: #4a2b33;
+  display: flex;
+  padding: 5%;
+  justify-content: space-between;
+  gap: 2%;
+  h2 {
+    @include h2;
+    @media (max-width: 1150px) {
+      br {
+        display: none;
+      }
+    }
+  }
+  p {
+    @include p;
+  }
+  @media (max-width: 800px) {
+    display: block;
+    text-align: center;
+    br {
+      display: none;
+    }
+  }
+}

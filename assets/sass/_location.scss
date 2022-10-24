@@ -1,0 +1,31 @@
+@use './about';
+$fontFirst: 'Inter', sans-serif;
+@mixin h4 {
+  font-family: $fontFirst;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 36px;
+  color: #ffffff;
+}
+.location {
+  background: #aa9e54;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 5% 0;
+  text-align: center;
+  .location__column {
+    h5 {
+      @include about.h5;
+      color: #ffffff;
+    }
+    h4 {
+      @include h4;
+      margin: 5% 0;
+    }
+  }
+  @media (max-width: 700px) {
+    display: block;
+  }
+}

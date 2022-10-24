@@ -1,0 +1,16 @@
+@use './header';
+$fontFirst: 'Inter', sans-serif;
+footer {
+  margin-top: 5%;
+  .footer__column {
+    display: flex;
+    gap: 2%;
+    flex-wrap: wrap;
+    justify-content: center;
+    h6 {
+      @include header.h6;
+      line-height: 22px;
+      color: #1f1f1f;
+    }
+  }
+}

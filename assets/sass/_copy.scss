@@ -1,0 +1,22 @@
+$fontFirst: 'Inter', sans-serif;
+@mixin a {
+  font-family: $fontFirst;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  color: #696969;
+}
+.copy {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  margin: 2%;
+  h6 {
+    @include a;
+  }
+  @media (max-width: 450px) {
+    display: block;
+    text-align: center;
+  }
+}
